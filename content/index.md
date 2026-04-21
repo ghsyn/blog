@@ -1,4 +1,4 @@
 ---
 title: siyeon blog
 ---
-loading...
+🧬 Welcome to Siyeon's Synapses.
