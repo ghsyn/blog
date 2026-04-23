@@ -73,7 +73,7 @@ export const sharedPageComponents: SharedLayout = {
 `블로그 도메인/all`로 들어가보니 폴더 구조만 나오고 전체 글은 보이지 않았다. `all/` 경로로 접속했을 때Quartz가 자동으로 Folder Index 기능을 실행해서 하위 폴더(`book`, `my quartz`)만 리스트로 보여주고 있다.  
 `FolderContent` 컴포넌트에서 직접 수정하여 커스텀한다.  
 - (기존) 폴더를 하나의 아이템으로 추가 -> (신규) **폴더 안의 글들을 펼쳐서** 추가
-- 자세한 구현 내용은 깃허브 참고
+- 자세한 구현 내용은 [깃허브](https://github.com/ghsyn/blog/commit/0d6af93234d0b80e7a0d365ea3a1df923b3d6428#diff-20a663007be7bc4805708073af7217f42ccbf9ff21016979ead0ef701d0ca92b) 참고
 ```tsx
 // quartz/components/pages/FolderContent.tsx
 
