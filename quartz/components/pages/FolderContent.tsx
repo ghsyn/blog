@@ -36,6 +36,7 @@ export default ((opts?: Partial<FolderContentOptions>) => {
       return null
     }
 
+    /*
     const allPagesInFolder: QuartzPluginData[] =
       folder.children
         .map((node) => {
@@ -88,6 +89,18 @@ export default ((opts?: Partial<FolderContentOptions>) => {
           }
         })
         .filter((page) => page !== undefined) ?? []
+     */
+
+    // all/ 폴더 인덱스 시 하위 글 flat하게 나오도록 설정
+    const flattenChildren = (nodes: NonNullable<typeof folder>["children"]): QuartzPluginData[] =>
+        nodes.flatMap((node) => {
+          if (node.data) return [node.data]
+          if (node.isFolder && options.showSubfolders) return flattenChildren(node.children)
+          return []
+        })
+
+    const allPagesInFolder: QuartzPluginData[] = flattenChildren(folder.children)
+
     const cssClasses: string[] = fileData.frontmatter?.cssclasses ?? []
     const classes = cssClasses.join(" ")
     const listProps = {

@@ -20,5 +20,20 @@
         opacity: 0.6;
       }
     }
+
+    // 게시글 목록 구분선 생성
+    & > li.recent-li {
+      margin: 0;
+      padding: 1rem 0 1.2rem 0;
+
+      &:not(:last-child)::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: var(--lightgray);
+        margin-top: 1rem;
+      }
+    }
   }
 }

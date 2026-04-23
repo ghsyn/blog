@@ -1,13 +1,22 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { version } from "./package.json"
+
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.RecentNotes({
+      title: "최근에 작성한 글",
+      limit: 2,
+      linkToMore: "all/",
+    }),
+  ],
   footer: Component.Footer({
     links: {
+      [`Quartz v${version}`]: "https://quartz.jzhao.xyz/",
       GitHub: "https://github.com/jackyzha0/quartz",
       "Discord Community": "https://discord.gg/cRFFHYye7t",
     },
