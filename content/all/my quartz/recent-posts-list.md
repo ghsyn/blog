@@ -9,7 +9,6 @@ tags:
 ![[스크린샷 2026-04-23 오전 11.23.26.png]]
 
 메인 페이지에 최근 작성한 글 목록이 보여지도록 하고 싶다. [[recent notes]]를 참고해보자.[^1]
-
 # 1. 레이아웃 설정 뜯어보기
 루트 폴더 바로 하위의 `quartz.layout.ts` 파일은 Quartz 페이지의 구조를 결정한다. 해당 파일을 보면 세가지 객체가 존재하며 각 항목은 다음과 같은 설정을 담당한다.
 1. `sharedPageComponents`: 블로그의 모든 페이지를 나타내는 컴포넌트[^2]
@@ -22,7 +21,6 @@ tags:
 3. `defaultListPageLayout`: 특정 태그나 폴더를 클릭했을 때 파일 목록을 보여주는 페이지 설정[^4]
 	- 마찬가지로 `beforeBody`, `left`, `right` 3가지 섹션으로 나눠짐
 	- ![[Pasted image 20260423170550.png]]
-
 # 2. 최근 글 커스텀 & 적용
 최근 글을 보여주는 컴포넌트는 `Component.RecentNotes()`를 사용하면 되고 내부에서 사용할 수 있는 옵션들은 이런 것들이 있다.
 - `title`: 최근 글 목록의 소제목
@@ -68,8 +66,7 @@ export const sharedPageComponents: SharedLayout = {
   }),  
 }
 ```
-
-# 3. 전체 글 페이지
+# 3. 전체 글 페이지
 `블로그 도메인/all`로 들어가보니 폴더 구조만 나오고 전체 글은 보이지 않았다. `all/` 경로로 접속했을 때Quartz가 자동으로 Folder Index 기능을 실행해서 하위 폴더(`book`, `my quartz`)만 리스트로 보여주고 있다.  
 `FolderContent` 컴포넌트에서 직접 수정하여 커스텀한다.  
 - (기존) 폴더를 하나의 아이템으로 추가 -> (신규) **폴더 안의 글들을 펼쳐서** 추가
@@ -87,9 +84,7 @@ const flattenChildren = (nodes: NonNullable<typeof folder>["children"]): QuartzP
 const allPagesInFolder: QuartzPluginData[] = flattenChildren(folder.children)
 ```
 
----
-
-# 3. 추가 설정
+# 4. 추가 설정
 ## 1. 구분선
 설정 후 로컬에서 돌려보니 목록에 게시물들이 서로 너무 붙어있어서 구분선을 추가했다.
 ```scss

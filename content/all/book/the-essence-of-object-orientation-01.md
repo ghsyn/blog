@@ -1,12 +1,12 @@
 ---
 title: 객체지향의 사실과 오해 - 01/협력하는 객체들의 공동체
-Created: 2025-06-23
+date: 2025-06-23
 tags:
   - 객체지향
   - oop
   - 다형성
 ---
-![[Pasted-image-20260421233516.png]]
+![[Pasted image 20260421233516.jpeg]]
 
 퇴근 후 개인 프로젝트를 진행하며 다시 한번 객체지향적 사고를 정립하고 도메인을 중심으로 한 설계를 진행해 보고자 이 책을 선택했다. 유지보수가 쉽고 재사용이 용이한 프로젝트가 탄생하기를 기대해 본다.  
   
@@ -45,12 +45,8 @@ tags:
 
 > 4. 책임을 수행하는 방법은 자율적으로 선택할 수 있다. (p. 28)
 
-동일한 요청에 대해 서로 다른 방식으로 응답할 수 있는 객체의 능력을 의미한다.  
-[변화에 유연한 소프트웨어를 만들기 위해서 객체 지향 패러다임을 사용하는 것이라면, 그러한 목적 달성에 중추적인 역할을 “다형성”이 해낸다.](https://tecoble.techcourse.co.kr/post/2020-10-27-polymorphism/)  
-우리가 익숙하게 오버로딩 및 오버라이딩을 구현할 수 있는 이유다.  
+동일한 요청에 대해 서로 다른 방식으로 응답할 수 있는 객체의 능력을 의미한다. [변화에 유연한 소프트웨어를 만들기 위해서 객체 지향 패러다임을 사용하는 것이라면, 그러한 목적 달성에 중추적인 역할을 “다형성”이 해낸다.](https://tecoble.techcourse.co.kr/post/2020-10-27-polymorphism/) 우리가 익숙하게 오버로딩 및 오버라이딩을 구현할 수 있는 이유다.  
   
-
 ---
-
-참고  
-[https://tecoble.techcourse.co.kr/post/2020-10-27-polymorphism/](https://tecoble.techcourse.co.kr/post/2020-10-27-polymorphism/ "https://tecoble.techcourse.co.kr/post/2020-10-27-polymorphism/")
+**관련 링크**
+[# 다형성(Polymorphism)이란?](https://tecoble.techcourse.co.kr/post/2020-10-27-polymorphism/)
