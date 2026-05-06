@@ -1,5 +1,5 @@
 ---
-title: Dockerfile 명령어 끝내기
+title: Dockerfile 주요 명령어 정리
 date: 2026-04-24
 tags:
   - "#docker"
@@ -26,7 +26,7 @@ FROM [--platform=<platform>] <image>[:<tag>] [AS <name>]
 FROM [--platform=<platform>] <image>[@<digest>] [AS <name>]
 
 # my
-FROM gradle:8.12-jdk17 AS builder
+FROM gradle:8.12-jdk17
 ```
 #### (참고)
 - `--platform`
@@ -78,7 +78,7 @@ COPY . .
 > [!question] 생각해볼 부분
 > 1. 어디서부터 어디까지 컨테이너로 복사해와야할까?
 > 2. 설정 파일이나 패키지들은 자주 바뀌지 않으니 저장해두었다가 재사용하고 변경된 파일만 다시 복사해오면 안될까?
-> 3. 수정 후 첫 빌드 시에만 복사해오고 실행 시에는 실행에 필요한 결과물만 복사해오면 안되나?
+> 3. 전체 소스말고 필요한 소스 부분만 가져오는 것이 효율적이기도 하고 보안에도 더 유리하지 않나?
 ## 4. `RUN`
 #### 정의
 - 뒤에 오는 명령어 실행 후, 실행된 결과를 현재 이미지 위에 새 레이어로 생성한다.
@@ -179,11 +179,11 @@ ENTRYPOINT ["java", "-jar", "build/libs/app.jar"]
 - 이미 `CMD`가 실행될 상태이더라도 그 후에 실행될 Dockerfile에 `ENTRYPOINT` 명령어가 새롭게 정의된다면 기존 베이스 이미지에 있던 `CMD`는 **자동으로 삭제(초기화)** 된다.  
   만약 인자가 필요하다면 현재 Dockerfile에서 `CMD`를 다시 써줘야 한다.
 ---
-# 3. 전체 코드
+# 마치며 + 전체 코드
 위 명령어 조건에 맞추어 내 프로젝트를 기준으로 기본적인 Dockerfile을 작성했다.
 ```Dockerfile
 # 1. 빌드 환경 설정 (Java 17 버전 사용)
-FROM gradle:8.12-jdk17 AS builder
+FROM gradle:8.12-jdk17
 WORKDIR /app
 
 # 2. 전체 소스 코드 복사
