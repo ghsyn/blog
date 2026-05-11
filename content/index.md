@@ -1,4 +1,4 @@
 ---
-title: siyeon blog
+title: Siyeon blog
 ---
-🧬 Welcome to Siyeon's Synapses.
+🧬 Welcome to Siyeon's Synapses

@@ -12,7 +12,7 @@ import { concatenateResources } from "../util/resources"
 type OrderEntries = "sort" | "filter" | "map"
 
 export interface Options {
-  title?: string
+  title?: "목록"
   folderDefaultState: "collapsed" | "open"
   folderClickBehavior: "collapse" | "link"
   useSavedState: boolean
@@ -23,8 +23,8 @@ export interface Options {
 }
 
 const defaultOptions: Options = {
-  folderDefaultState: "collapsed",
-  folderClickBehavior: "link",
+  folderDefaultState: "open",
+  folderClickBehavior: "collapse",
   useSavedState: true,
   mapFn: (node) => {
     return node

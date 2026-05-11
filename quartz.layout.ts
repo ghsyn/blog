@@ -9,8 +9,8 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.RecentNotes({
-      title: "최근에 작성한 글",
-      limit: 2,
+      title: "Recent posts",
+      limit: 4,
       linkToMore: "all/",
     }),
   ],
@@ -31,7 +31,11 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    Component.ContentMeta(),
+    // Component.ContentMeta(),
+    Component.ConditionalRender({
+      component: Component.ContentMeta(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
     Component.TagList(),
   ],
   left: [
