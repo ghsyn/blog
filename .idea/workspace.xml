@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af825fc-0482-4371-aa3b-bd09ef1f3f3c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/all/docker/best-dockerfile.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/all/docker/best-dockerfile.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quartz.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz.layout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quartz.layout.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/components/Explorer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quartz/components/Explorer.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="3af825fc-0482-4371-aa3b-bd09ef1f3f3c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1776919513251</updated>
       <workItem from="1776919516062" duration="12845000" />
-      <workItem from="1778503069053" duration="2467000" />
+      <workItem from="1778503069053" duration="2690000" />
     </task>
     <servers />
   </component>
